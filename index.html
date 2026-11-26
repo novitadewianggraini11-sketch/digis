@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGISMART | Literasi Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">DIGI<span>SMART.</span></div>
+
+    <nav id="navbar">
+        <a href="#" onclick="showPage('home')">Beranda</a>
+        <a href="#" onclick="showPage('about')">Tentang</a>
+        <a href="#" onclick="showPage('home'); setTimeout(()=>document.getElementById('features').scrollIntoView(),50)">Fitur</a>
+        <button class="btn-outline" onclick="showPage('login')">Masuk</button>
+        <button class="btn-main" onclick="showPage('register')">Daftar</button>
+    </nav>
+</header>
+
+<main>
+
+<!-- BERANDA -->
+<section id="home" class="page active">
+
+    <div class="hero">
+        <div class="hero-text">
+            <span class="tag">PLATFORM EDUKASI DIGITAL</span>
+
+            <h1>Cerdas Menggunakan Teknologi, Aman di Dunia Digital.</h1>
+
+            <p>
+                Tingkatkan literasi digitalmu bersama DIGISMART.
+                Belajar mengenali hoaks, menjaga keamanan data,
+                dan menggunakan teknologi secara bijak.
+            </p>
+
+            <button class="btn-main" onclick="showPage('register')">
+                Mulai Belajar →
+            </button>
+        </div>
+
+        <div class="hero-visual">
+            <div class="big-icon">💻</div>
+            <h2>Digital Smart Learning</h2>
+            <p>Belajar • Aman • Bertanggung Jawab</p>
+        </div>
+    </div>
+
+    <div class="section" id="features">
+        <span class="tag">FITUR UNGGULAN</span>
+        <h2>Jelajahi Pembelajaran Digital</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">📰</div>
+                <h3>Anti Hoaks</h3>
+                <p>Belajar membedakan informasi benar dan berita palsu.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🔐</div>
+                <h3>Keamanan Digital</h3>
+                <p>Pelajari cara melindungi akun dan data pribadi.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🌐</div>
+                <h3>Jejak Digital</h3>
+                <p>Kenali dampak aktivitas yang dilakukan di internet.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🤖</div>
+                <h3>Literasi AI</h3>
+                <p>Gunakan kecerdasan buatan secara bijak dan bertanggung jawab.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📝</div>
+                <h3>Kuis Digital</h3>
+                <p>Uji pengetahuan melalui kuis interaktif.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📊</div>
+                <h3>Hasil Belajar</h3>
+                <p>Pantau perkembangan hasil pembelajaranmu.</p>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- TENTANG -->
+<section id="about" class="page section">
+    <span class="tag">TENTANG KAMI</span>
+    <h1>Mengenal DIGISMART</h1>
+
+    <div class="about-box">
+        <h2>Apa itu DIGISMART?</h2>
+        <p>
+            DIGISMART merupakan platform edukasi digital
+            yang bertujuan meningkatkan pemahaman masyarakat
+            tentang penggunaan teknologi secara cerdas,
+            aman, dan bertanggung jawab.
+        </p>
+
+        <h2>Tujuan Website</h2>
+        <p>
+            Membantu pengguna meningkatkan kemampuan literasi
+            digital, memahami keamanan informasi, mengenali
+            hoaks, serta memanfaatkan teknologi secara positif.
+        </p>
+    </div>
+</section>
+
+<!-- LOGIN -->
+<section id="login" class="page auth-section">
+    <div class="auth-card">
+        <h1>DIGI<span>SMART.</span></h1>
+        <h2>Selamat Datang!</h2>
+        <p>Masuk untuk melanjutkan pembelajaran.</p>
+
+        <form id="loginForm">
+            <label>Email</label>
+            <input type="email" id="loginEmail" placeholder="Masukkan email" required>
+
+            <label>Kata Sandi</label>
+            <input type="password" id="loginPassword" placeholder="Masukkan kata sandi" required>
+
+            <button class="btn-main full" type="submit">Masuk</button>
+        </form>
+
+        <p id="loginMessage" class="message"></p>
+
+        <p>Belum memiliki akun?
+            <a href="#" onclick="showPage('register')">Daftar sekarang</a>
+        </p>
+    </div>
+</section>
+
+<!-- REGISTER -->
+<section id="register" class="page auth-section">
+    <div class="auth-card">
+        <h1>DIGI<span>SMART.</span></h1>
+        <h2>Buat Akun Baru</h2>
+        <p>Mulai perjalanan literasi digitalmu.</p>
+
+        <form id="registerForm">
+            <label>Nama Lengkap</label>
+            <input type="text" id="regName" placeholder="Nama lengkap" required>
+
+            <label>Email</label>
+            <input type="email" id="regEmail" placeholder="Alamat email" required>
+
+            <label>Kata Sandi</label>
+            <input type="password" id="regPassword" minlength="8" placeholder="Minimal 8 karakter" required>
+
+            <button class="btn-main full" type="submit">Daftar Sekarang</button>
+        </form>
+
+        <p id="registerMessage" class="message"></p>
+
+        <p>Sudah punya akun?
+            <a href="#" onclick="showPage('login')">Masuk</a>
+        </p>
+    </div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="page section">
+    <div class="welcome">
+        <span class="tag">DASHBOARD PENGGUNA</span>
+        <h1>Halo, <span id="userName">Pengguna</span>! 👋</h1>
+        <p>Selamat datang kembali. Yuk, tingkatkan literasi digitalmu!</p>
+    </div>
+
+    <div class="stats">
+        <div class="stat">
+            <p>Materi Selesai</p>
+            <h2 id="materialCount">0</h2>
+        </div>
+        <div class="stat">
+            <p>Kuis Dikerjakan</p>
+            <h2 id="quizCount">0</h2>
+        </div>
+        <div class="stat">
+            <p>Total Nilai</p>
+            <h2 id="totalScore">0</h2>
+        </div>
+    </div>
+
+    <h2>Menu Pembelajaran</h2>
+
+    <div class="cards">
+        <div class="card">
+            <div class="icon">📚</div>
+            <h3>Materi Digital</h3>
+            <p>Pelajari berbagai pengetahuan literasi digital.</p>
+            <button class="btn-main" onclick="showPage('materi')">Buka Materi</button>
+        </div>
+
+        <div class="card">
+            <div class="icon">📝</div>
+            <h3>Kuis Digital</h3>
+            <p>Uji pemahamanmu melalui kuis.</p>
+            <button class="btn-main" onclick="startQuiz()">Mulai Kuis</button>
+        </div>
+    </div>
+
+    <button class="btn-outline logout" onclick="logout()">Keluar dari Akun</button>
+</section>
+
+<!-- MATERI -->
+<section id="materi" class="page section">
+    <span class="tag">EDUKASI DIGITAL</span>
+    <h1>Materi Literasi Digital</h1>
+    <p>Pelajari pengetahuan penting dalam menggunakan teknologi.</p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">📰</div>
+            <h3>Mengenali Hoaks</h3>
+            <p>Hoaks merupakan informasi palsu yang dibuat seolah-olah benar.</p>
+            <p><b>Tips:</b> Periksa sumber berita, tanggal publikasi, dan bandingkan dengan sumber terpercaya.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔐</div>
+            <h3>Keamanan Digital</h3>
+            <p>Keamanan digital merupakan upaya melindungi akun dan informasi pribadi.</p>
+            <p><b>Tips:</b> Gunakan kata sandi kuat dan jangan membagikan kode OTP.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌐</div>
+            <h3>Jejak Digital</h3>
+            <p>Jejak digital merupakan rekaman aktivitas seseorang ketika menggunakan internet.</p>
+            <p><b>Tips:</b> Berpikirlah sebelum mengunggah sesuatu ke media sosial.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🤖</div>
+            <h3>Literasi AI</h3>
+            <p>AI merupakan teknologi yang dapat membantu manusia menyelesaikan berbagai pekerjaan.</p>
+            <p><b>Tips:</b> Periksa kembali informasi yang dihasilkan AI.</p>
+        </div>
+
+    </div>
+
+    <button class="btn-main" onclick="completeMaterial()">
+        Tandai Materi Selesai
+    </button>
+
+    <button class="btn-outline" onclick="showPage('dashboard')">
+        Kembali
+    </button>
+</section>
+
+<!-- KUIS -->
+<section id="kuis" class="page section">
+    <div class="quiz-card">
+        <span class="tag">UJI PENGETAHUAN</span>
+        <h1>Kuis Literasi Digital</h1>
+        <p id="questionNumber"></p>
+
+        <h3 id="questionText"></h3>
+
+        <div id="answerOptions"></div>
+
+        <p id="quizMessage" class="message"></p>
+
+        <button id="nextButton" class="btn-main" onclick="nextQuestion()">
+            Selanjutnya
+        </button>
+
+        <div id="quizResult"></div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <h2>DIGISMART.</h2>
+    <p>Cerdas dan Aman di Dunia Digital.</p>
+    <p>© 2026 DIGISMART. Semua Hak Dilindungi.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
